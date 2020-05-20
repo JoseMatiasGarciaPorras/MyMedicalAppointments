@@ -1,6 +1,15 @@
+package UIMenu;
+
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.List;
 import java.util.Scanner;
 
 public class UIMenu {
+    public static String[] months = {"January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"};
+
+
     public static void showMenu(){
         System.out.println("Welcome to my Appointments");
         System.out.println("Choose your option: ");
@@ -66,6 +75,29 @@ public class UIMenu {
     }
 
     public static void showMenuPatient(){
+        System.out.println(selectMonths());
+    }
+
+    public static List selectMonths(){
+        Calendar today = Calendar.getInstance();
+        String month = Integer.toString((today.get(Calendar.MONTH)));
+        System.out.println(today.get(Calendar.MONTH));
+        int position = 0;
+        for (int i = 0; i < months.length; i++) {
+            if(i == Integer.parseInt(month)){
+                position = i;
+                break;
+            }
+        }
+        String first = months[position];
+        String second = months[position + 1];
+        String third = months[position + 2];
+        List<String> quarters = new ArrayList<String>();
+        quarters.add(first);
+        quarters.add(second);
+        quarters.add(third);
+        return quarters;
+
 
     }
 }

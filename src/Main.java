@@ -1,4 +1,6 @@
+import UIMenu.UIMenu.*;
 
+import static UIMenu.UIMenu.*;
 
 public class Main {
     public static void main(String [] args){
@@ -10,7 +12,7 @@ public class Main {
         myDoctor2.showName();
         myDoctor2.showId();*/
 
-        UIMenu.showMenu();
+        showMenu();
     }
 
 
