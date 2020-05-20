@@ -1,5 +1,5 @@
 public class Doctor {
-    int id;
+    static int id = 0;
     String name;
     String speciality;
     /**
@@ -17,5 +17,13 @@ public class Doctor {
     public Doctor(String name, String speciality){
         this.name = name;
         this.speciality = speciality;
+        id++;
+    }
+    /**
+     * @author José Matías García Porras
+     * Método que imprime por pantalla el id del doctor
+     * */
+    public void showId(){
+        System.out.println("Identificador del doctor: " + id);
     }
 }
